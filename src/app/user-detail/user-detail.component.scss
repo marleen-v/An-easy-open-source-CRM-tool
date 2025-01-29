@@ -1,0 +1,49 @@
+.user-detail-header{
+    padding: 20px;
+    min-height: 250px;
+    background-color: rgb(19, 139, 99);
+    color:whitesmoke;
+    display:flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+
+    div {
+        display:flex;
+    align-items: flex-start;
+
+
+    img {
+        height: 100px;
+        width:100px;
+       /*  object-fit: cover;
+        border-radius:100% */
+    }
+ 
+
+        
+    }
+}
+
+.user-details{
+    margin-left:20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100px;
+
+    h2{
+        margin-bottom:0;
+    }
+}
+
+.info-card{
+    position: relative;
+    min-height: 100px;
+
+    button{
+        position:absolute;
+        right: 20px;
+        top: 20px;
+    }
+}
