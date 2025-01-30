@@ -5,6 +5,7 @@ import {
   collectionData,
   addDoc,
   docSnapshots,
+  updateDoc,
   doc,
   onSnapshot,
 } from '@angular/fire/firestore';
@@ -75,6 +76,15 @@ export class FirebaseService {
     } catch (error) {
       console.error('Fehler beim Hinzufügen:', error);
     }
+  }
+
+  async updateUser(userData: User){
+    if(userData.id){
+      const plainUserData = { ...userData };
+      const singleUserRef = doc(this.firestore, "users", userData.id);
+      await updateDoc(singleUserRef, plainUserData);
+    }
+
   }
 
   getSingleUser(userId: string) {

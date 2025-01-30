@@ -21,7 +21,7 @@ export class UserComponent {
   firestoreService = inject(FirebaseService);
 
   // for table
-  displayedColumns: string[] = ['firstName', 'lastName',  'birthday', 'street', 'zipCode', 'city', 'id'];
+  displayedColumns: string[] = ['firstName', 'lastName',  'birthday', 'street', 'zipCode', 'city', 'id', 'delete'];
   dataSource = this.firestoreService.usersArray;
 
   constructor(private router: Router) {}
@@ -32,5 +32,9 @@ export class UserComponent {
 
   navigateToUserInfo(userId: string){
     this.router.navigate(['/user/' + userId]);
+  }
+
+  deleteUser(){
+    
   }
 }

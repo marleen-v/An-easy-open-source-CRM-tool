@@ -48,10 +48,9 @@ export class UserDetailComponent implements OnInit {
   }
 
   openEditDialog():void{
-
-   /*   const dialog = this.dialog.open(DialogEditUserComponent); 
-     dialog.componentInstance.user = this.firestoreService.userInfo ; */
-     console.log(this.firestoreService.userInfo);
+     const dialog = this.dialog.open(DialogEditUserComponent); 
+     dialog.componentInstance.user = this.firestoreService.userInfo[0] ;
+    console.log(this.firestoreService.userInfo[0]); 
      
 
   }

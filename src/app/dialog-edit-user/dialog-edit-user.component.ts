@@ -33,7 +33,7 @@ export class DialogEditUserComponent {
   firestoreService = inject(FirebaseService);
   dialogRef = inject(MatDialogRef<DialogEditUserComponent>); 
 
-  user :any[] =[];
+  user! :User;
 
   loading = false;
 
@@ -42,16 +42,15 @@ export class DialogEditUserComponent {
    
   }
 
-   saveUser() {
-    /*
+   updateUser() {
     this.loading = true;
-    this.firestoreService.addUser(this.user);
+    this.firestoreService.updateUser(this.user);
     console.log(this.user);
 
     setTimeout(() => {
       this.dialogRef.close();
       this.loading = false;
-    }, 1500);*/
+    }, 1500);
   } 
 
   onNoClick(): void {

@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { MatDialogModule } from '@angular/material/dialog';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -11,6 +11,8 @@ import { User } from './../../models/user.class';
 import { Firestore } from '@angular/fire/firestore';
 import { FirebaseService } from '../firebase.service';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-dialog-add-user',
@@ -24,6 +26,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatIconModule,
     MatDatepickerModule,
     MatProgressBarModule,
+    CommonModule 
   ],
   templateUrl: './dialog-add-user.component.html',
   styleUrl: './dialog-add-user.component.scss',
